@@ -4,8 +4,8 @@ import time
 from datetime import datetime, timedelta
 
 symbols = [
-    "BTCUSDT",   # Bitcoin
-    "ETHUSDT",   # Ethereum
+    "DOGEUSDT",   # Bitcoin
+    "AVAXUSDT",   # Ethereum
 ]
 
 end_date = datetime.now()
@@ -53,7 +53,7 @@ def fetch_symbol(symbol):
         current_start = current_end
         time.sleep(0.5)
 
-    return pd.DataFrame(all_data)   # raw, no cleaning
+    return pd.DataFrame(all_data)   
 
 
 for symbol in symbols:
@@ -62,7 +62,7 @@ for symbol in symbols:
 
     if df is not None:
         name = symbol.replace("USDT", "").lower()
-        filename = f"{name}_5years_binance.csv"
+        filename = f"{name}_6years_binance.csv"
         df.to_csv(filename, index=False)
         print(f"  Saved {len(df)} rows to {filename}")
     else:
