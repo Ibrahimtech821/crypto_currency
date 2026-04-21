@@ -65,7 +65,7 @@
                     +3%  = price rose 3% today
                     -5%  = price dropped 5% today
 
-    volatility_7   = standard deviation of return_1d last 7 days
+    volatility_7   = standard deviation of moving_1d last 7 days
                     "is market nervous or calm lately?"
                     high = jumping around a lot
                     low  = stable and predictable

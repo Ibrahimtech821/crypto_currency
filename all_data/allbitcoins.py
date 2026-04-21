@@ -4,8 +4,14 @@ import time
 from datetime import datetime, timedelta
 
 symbols = [
-    "DOGEUSDT",   # Bitcoin
-    "AVAXUSDT",   # Ethereum
+     "BTCUSDT",   #bitcoin
+     "ETHUSDT",   #etherum
+     "BNBUSDT",   # Binance Coin
+     "SOLUSDT",   # Solana
+     "XRPUSDT",   # XRP
+     "ADAUSDT",   # Cardano
+     "DOGEUSDT",  # Dogecoin
+     "AVAXUSDT",  # Avalanche 
 ]
 
 end_date = datetime.now()
