@@ -12,9 +12,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
 
 
-# =========================
-# PAGE CONFIG
-# =========================
+
 
 st.set_page_config(
     page_title="Cross-Asset Crypto Movement Prediction",
@@ -24,9 +22,7 @@ st.set_page_config(
 st.title("Cross-Asset Cryptocurrency Movement Classification")
 
 
-# =========================
-# LOAD DATA
-# =========================
+
 
 df = pd.read_csv("final_crypto.csv")
 
@@ -34,9 +30,6 @@ df = pd.read_csv("final_crypto.csv")
 df = df[~df["type"].isin(["BTC", "DOGE"])].copy()
 
 
-# =========================
-# BASIC SETTINGS
-# =========================
 
 drop_cols = [
     "label",
@@ -50,7 +43,7 @@ drop_cols = [
     "negative_momentum",
 ]
 
-# Use only numeric features
+
 feature_cols = (
     df.drop(columns=drop_cols, errors="ignore")
     .select_dtypes(include=[np.number])
@@ -62,9 +55,7 @@ le = LabelEncoder()
 le.fit(df["label"])
 
 
-# =========================
-# HELPER FUNCTIONS
-# =========================
+
 
 def get_random_forest():
     return RandomForestClassifier(
